@@ -1,10 +1,5 @@
-import { Charts } from "@/components/charts";
-
-export default function Home() {
+export default function Page() {
   return (
-    <>
-      <Charts />
-      <></>
-    </>
+    <div>DASHBOARD</div>
   )
-};
+}

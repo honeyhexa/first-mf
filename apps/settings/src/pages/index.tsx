@@ -1,10 +1,5 @@
-import { Stats } from "@/components/stats";
-
-export default function Home() {
+export default function Page() {
   return (
-    <>
-      <Stats />
-      <></>
-    </>
+    <div>SETTINGS</div>
   )
-};
+}

@@ -12,6 +12,10 @@
   "dependencies": {
     "@module-federation/nextjs-mf": "^8.4.0",
     "@repo/ui": "*",
+    "@tanstack/react-query": "^5.51.11",
+    "@tanstack/react-table": "^8.19.3",
+    "@tanstack/react-virtual": "^3.8.3",
+    "lucide-react": "^0.412.0",
     "next": "^14.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

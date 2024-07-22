@@ -9,6 +9,7 @@ const remotes = (isServer) => {
     dashboard: `dashboard@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
     settings: `settings@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
     users: `users@http://localhost:3003/_next/static/${location}/remoteEntry.js`,
+    shared: `shared@http://localhost:3004/_next/static/${location}/remoteEntry.js`,
   };
 }
 
@@ -19,7 +20,19 @@ module.exports = {
       new NextFederationPlugin({
         name: 'shell',
         filename: 'static/chunks/remoteEntry.js',
-        remotes: remotes(isServer)
+        remotes: remotes(isServer),
+        shared: {
+          tailwindcss: {
+            eager: true,
+            singleton: true,
+            requiredVersion: false,
+          },
+          recharts: {
+            eager: true,
+            singleton: true,
+            requiredVersion: false,
+          },
+        },
       })
     );
 

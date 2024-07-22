@@ -8,6 +8,9 @@
     },
     "lint": {},
     "type-check": {},
+    "dev:test": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true

@@ -10,7 +10,23 @@ module.exports = {
         name: 'dashboard',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './charts': './src/components/charts/index.tsx'  
+          './charts': './src/components/charts/index.tsx',
+          './reqres': './src/components/reqres.tsx'
+        },
+        extraOptions: {
+          exposePages: true
+        },
+        shared: {
+          tailwindcss: {
+            eager: true,
+            singleton: true,
+            requiredVersion: false,
+          },
+          recharts: {
+            eager: true,
+            singleton: true,
+            requiredVersion: false,
+          },
         },
       })
     );

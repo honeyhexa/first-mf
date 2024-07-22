@@ -10,7 +10,18 @@ module.exports = {
         name: 'settings',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './stats': './src/components/stats/index.tsx'  
+          './stats': './src/components/stats/index.tsx',
+          './user': './src/components/user/index.tsx',
+        },
+        extraOptions: {
+          exposePages: true
+        },
+        shared: {
+          tailwindcss: {
+            eager: true,
+            singleton: true,
+            requiredVersion: false,
+          },
         },
       })
     );
