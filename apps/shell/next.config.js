@@ -6,10 +6,10 @@ const remotes = (isServer) => {
   const location = isServer ? 'ssr' : 'chunks';
   return {
     // specify remotes
-    dashboard: `dashboard@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
-    settings: `settings@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
-    users: `users@http://localhost:3003/_next/static/${location}/remoteEntry.js`,
-    shared: `shared@http://localhost:3004/_next/static/${location}/remoteEntry.js`,
+    dashboard: `dashboard@${process.env.NEXT_PUBLIC_DASHBOARD_URL}/_next/static/${location}/remoteEntry.js`,
+    settings: `settings@${process.env.NEXT_PUBLIC_SETTINGS_URL}/_next/static/${location}/remoteEntry.js`,
+    users: `users@${process.env.NEXT_PUBLIC_USERS_URL}/_next/static/${location}/remoteEntry.js`,
+    shared: `shared@${process.env.NEXT_PUBLIC_SHARED_URL}/_next/static/${location}/remoteEntry.js`,
   };
 }
 
